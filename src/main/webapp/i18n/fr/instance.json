@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "instance": {
+      "home": {
+        "title": "Instances",
+        "createLabel": "Créer un nouveau Instance",
+        "createOrEditLabel": "Créer ou éditer un Instance",
+        "notFound": "Aucun Instance trouvé"
+      },
+      "created": "Un nouveau Instance a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Instance avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Instance avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Instance {{ id }} ?"
+      },
+      "detail": {
+        "title": "Instance"
+      },
+      "type": "Type",
+      "title": "Title",
+      "language": "Language",
+      "publicationDate": "Publication Date",
+      "work": "Work"
+    }
+  }
+}

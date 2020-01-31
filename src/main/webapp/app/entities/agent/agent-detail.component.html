@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="agent">
+            <h2><span jhiTranslate="gatewayApp.agent.detail.title">Agent</span> {{agent.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gatewayApp.agent.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{agent.firstName}}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.agent.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{agent.lastName}}</span>
+                </dd>
+                <dt><span jhiTranslate="gatewayApp.agent.work">Work</span></dt>
+                <dd>
+                    <div *ngIf="agent.workId">
+                        <a [routerLink]="['/work', agent.workId, 'view']">{{agent.workId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/agent', agent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
